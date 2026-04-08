@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Activity Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>DAILY ACTIVITY TRACKER</h1>
+      <p class="subtitle">Track your daily tasks / Avtivities and update your progress easily</p>
+    </header>
+
+    <section class="add-section">
+      <h2>Add New Activity</h2>
+      <div class="add-box">
+        <input type="text" id="activityInput" placeholder="Enter a new activity">
+        <button id="addBtn">Add</button>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <h2>Progress</h2>
+      <p id="progressText">0 out of 0 activities completed</p>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="activity-section">
+      <h2>Today's Activities</h2>
+      <div id="activityList" class="activity-list"></div>
+    </section>
+
+    <section class="message-section">
+      <p id="doneMessage" class="completion-message"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
