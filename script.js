@@ -33,8 +33,9 @@ function showActivities() {
         <p class="status">${activity.completed ? "Completed" : "Pending"}</p>
       </div>
       <div class="button-group">
-        <button class="complete-btn" onclick="completeActivity(${activity.id})">Mark as Completed</button>
-        <button class="cancel-btn" onclick="cancelActivity(${activity.id})">Cancel</button>
+        <button class="${activity.completed ? "incomplete-btn" : "complete-btn"}" onclick="toggleActivity(${activity.id})">
+          ${activity.completed ? "Mark as Incomplete" : "Mark as Completed"}
+        </button>
         <button class="delete-btn" onclick="deleteActivity(${activity.id})">Delete</button>
       </div>
     `;
@@ -45,20 +46,10 @@ function showActivities() {
   updateProgress();
 }
 
-function completeActivity(id) {
+function toggleActivity(id) {
   for (let i = 0; i < activities.length; i++) {
     if (activities[i].id === id) {
-      activities[i].completed = true;
-    }
-  }
-
-  showActivities();
-}
-
-function cancelActivity(id) {
-  for (let i = 0; i < activities.length; i++) {
-    if (activities[i].id === id) {
-      activities[i].completed = false;
+      activities[i].completed = !activities[i].completed;
     }
   }
 

@@ -192,6 +192,41 @@ h2 {
 .complete-btn {
   background: #2563eb;
 }
+.complete-btn,
+.incomplete-btn,
+.delete-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.complete-btn {
+  background: #2563eb;
+}
+
+.complete-btn:hover {
+  background: #1d4ed8;
+}
+
+.incomplete-btn {
+  background: #f59e0b;
+}
+
+.incomplete-btn:hover {
+  background: #d97706;
+}
+
+.delete-btn {
+  background: #9ca3af;
+}
+
+.delete-btn:hover {
+  background: #6b7280;
+}
 
 .complete-btn:hover {
   background: #1d4ed8;
